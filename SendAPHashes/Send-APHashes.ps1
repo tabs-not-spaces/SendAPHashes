@@ -83,8 +83,6 @@ function Send-APHashDetails {
 
 }
 write-Host -ForegroundColor Green "++ Functions loaded.."
-Write-Host -ForegroundColor Green "++ Now Spinning up IE to load the IEX Engine.."
-Start-Process iexplore.exe
 Write-Host "----------------"
 Write-Host -ForegroundColor Yellow "+++ Everything should be good now.."
 Write-Host -ForegroundColor Yellow "+++ Copy this command and add your email: Send-APHashDetails -RawHashContent `$(get-APHashDetails) -toEmail *EMAIL*"
