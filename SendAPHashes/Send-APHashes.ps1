@@ -69,7 +69,7 @@ function Get-APHashDetails {
 function Send-APHashDetails {
     param(
         [Parameter(Mandatory = $true)]
-        [string]$RawHashContent,
+        $RawHashContent,
         [Parameter(Mandatory = $true)]
         [string]$toEmail
     )
