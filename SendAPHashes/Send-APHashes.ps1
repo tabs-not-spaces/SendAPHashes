@@ -76,7 +76,7 @@ function Send-APHashDetails {
     $uri = "https://prod-11.australiasoutheast.logic.azure.com:443/workflows/ed6feb27377549c48eb61eead31aa6e0/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=MUct_-xG37nJM3VLuf8JfWLJO35qwGQ9FQIuW63BmZs"
     $body = @{
         "Result" = "$($RawHashContent)",
-        "To"    + "$toEmail"
+        "toEmail"    + "$toEmail"
     }
     $jsonBody =  $body | convertto-Json
     Invoke-RestMethod -Method Post -Uri $uri -Body $jsonBody -ContentType 'application/json'
